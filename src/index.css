@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-bg text-text-main font-outfit overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-main bg-clip-text text-transparent;
+  }
+
+  .glass-panel {
+    @apply bg-dark-card backdrop-blur-xl border border-white/5 shadow-2xl rounded-2xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-main text-dark-bg;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary/10;
+  }
+}
