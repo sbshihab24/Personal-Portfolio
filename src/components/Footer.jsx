@@ -69,8 +69,8 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar: Copyright */}
-                <div className="pt-8 border-t border-white/5 text-center">
-                    <p className="text-base text-primary font-medium tracking-wide">
+                <div className="pt-10 border-t border-white/5 text-center">
+                    <p className="text-xl md:text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">
                         © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
                     </p>
                 </div>

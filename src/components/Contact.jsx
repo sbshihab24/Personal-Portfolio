@@ -11,7 +11,7 @@ const Contact = () => {
         setIsSubmitting(true);
         const formData = new FormData(e.target);
 
-        formData.append("access_key", "0b1a2640-2324-4539-8227-5d7ca480b1636"); // Public Demo Key
+        formData.append("access_key", "0b1a2640-2324-4539-8227-5d7ca480b163"); // Fixed Key
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -133,36 +133,36 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-2xl font-bold text-secondary mb-4">Name</label>
+                                    <label htmlFor="name" className="block text-3xl font-extrabold text-[#9933FF] mb-5 tracking-tight">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
-                                        placeholder="Enter your name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-secondary/50 transition-colors text-lg"
+                                        placeholder="Enter your full name"
+                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#9933FF] transition-all text-xl"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-2xl font-bold text-secondary mb-4">Email</label>
+                                    <label htmlFor="email" className="block text-3xl font-extrabold text-[#9933FF] mb-5 tracking-tight">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
-                                        placeholder="email@example.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-secondary/50 transition-colors text-lg"
+                                        placeholder="shihab@example.com"
+                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#9933FF] transition-all text-xl"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-2xl font-bold text-secondary mb-4">Message</label>
+                                    <label htmlFor="message" className="block text-3xl font-extrabold text-[#9933FF] mb-5 tracking-tight">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
-                                        rows="5"
-                                        placeholder="Tell me about your project..."
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-secondary/50 transition-colors text-lg"
+                                        rows="6"
+                                        placeholder="I'm interested in working with you..."
+                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#9933FF] transition-all text-xl shadow-inner-xl"
                                     ></textarea>
                                 </div>
                                 <motion.button
