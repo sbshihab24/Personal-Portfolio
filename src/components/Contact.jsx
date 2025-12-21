@@ -136,7 +136,7 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-lg font-bold text-purple-400 mb-2">Name</label>
+                                    <label htmlFor="name" className="block text-lg font-bold text-secondary mb-2">Name</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -148,7 +148,7 @@ const Contact = () => {
                                 </div>
                                 <input type="hidden" name="subject" value="New Portfolio Message from Shihab.AI" />
                                 <div>
-                                    <label htmlFor="email" className="block text-lg font-bold text-purple-400 mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-lg font-bold text-secondary mb-2">Email</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -159,7 +159,7 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-lg font-bold text-purple-400 mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-lg font-bold text-secondary mb-2">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
