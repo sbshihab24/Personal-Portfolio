@@ -48,9 +48,9 @@ const Contact = () => {
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6"
+                        className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4"
                     >
-                        Get In <span className="text-gradient">Touch</span>
+                        Get In <span className="text-secondary">Touch</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: -20 }}
@@ -136,37 +136,37 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-base font-bold text-secondary mb-2">Name</label>
+                                    <label htmlFor="name" className="block text-lg font-semibold text-secondary mb-2">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
                                         placeholder="Your Name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all"
                                     />
                                 </div>
                                 <input type="hidden" name="subject" value="New Portfolio Message from Shihab.AI" />
                                 <div>
-                                    <label htmlFor="email" className="block text-base font-bold text-secondary mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-lg font-semibold text-secondary mb-2">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
                                         placeholder="your@email.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-base font-bold text-secondary mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-lg font-semibold text-secondary mb-2">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
                                         rows="4"
-                                        placeholder="Tell me about your project..."
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
+                                        placeholder="How can I help you?"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all"
                                     ></textarea>
                                 </div>
                                 <motion.button
