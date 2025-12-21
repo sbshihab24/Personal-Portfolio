@@ -133,36 +133,36 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-xl font-bold text-secondary mb-3">Name</label>
+                                    <label htmlFor="name" className="block text-2xl font-bold text-secondary mb-4">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
-                                        placeholder="Your Name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
+                                        placeholder="Enter your name"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-secondary/50 transition-colors text-lg"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-xl font-bold text-secondary mb-3">Email</label>
+                                    <label htmlFor="email" className="block text-2xl font-bold text-secondary mb-4">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
-                                        placeholder="your@email.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
+                                        placeholder="email@example.com"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-secondary/50 transition-colors text-lg"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-xl font-bold text-secondary mb-3">Message</label>
+                                    <label htmlFor="message" className="block text-2xl font-bold text-secondary mb-4">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
-                                        rows="4"
-                                        placeholder="How can I help you?"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
+                                        rows="5"
+                                        placeholder="Tell me about your project..."
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-secondary/50 transition-colors text-lg"
                                     ></textarea>
                                 </div>
                                 <motion.button
