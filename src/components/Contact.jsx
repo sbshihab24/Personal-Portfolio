@@ -1,47 +1,171 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebook, FaHackerrank } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        const formData = new FormData(e.target);
+
+        formData.append("access_key", "01d0c410-6184-4869-9388-7e3e7a0776b6"); // Public Demo Key
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitted(true);
+                e.target.reset();
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            alert("Error submitting form. Please check your connection.");
+        }
+        setIsSubmitting(false);
+    };
+
     return (
-        <section id="contact" className="py-20">
-            <div className="container mx-auto px-6 text-center">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="glass-panel p-8 md:p-12 max-w-3xl mx-auto"
-                >
-                    <h2 className="text-3xl font-bold mb-8"><span className="text-gradient">Get In Touch</span></h2>
+        <section id="contact" className="bg-dark-bg/80 border-t border-white/10 py-24 relative overflow-hidden">
+            {/* Background Glows */}
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
-                    <div className="space-y-4 text-lg text-text-muted mb-10">
-                        <p className="flex items-center justify-center gap-3">
-                            <FaEnvelope className="text-primary" /> sbshihab2000@gmail.com
-                        </p>
-                        <p className="flex items-center justify-center gap-3">
-                            <FaPhone className="text-primary" /> +880 1790606985
-                        </p>
-                        <p className="flex items-center justify-center gap-3">
-                            <FaMapMarkerAlt className="text-primary" /> Dhaka, Bangladesh
-                        </p>
-                    </div>
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-                    <div className="flex justify-center gap-6">
-                        <a href="https://github.com/sbshihab24" target="_blank" rel="noopener noreferrer" className="text-3xl text-text-muted hover:text-white hover:scale-110 transition-all">
-                            <FaGithub />
-                        </a>
-                        <a href="https://www.linkedin.com/in/shihab24" target="_blank" rel="noopener noreferrer" className="text-3xl text-text-muted hover:text-[#0077b5] hover:scale-110 transition-all">
-                            <FaLinkedin />
-                        </a>
-                        <a href="https://www.facebook.com/mh.shihab.370" target="_blank" rel="noopener noreferrer" className="text-3xl text-text-muted hover:text-[#1877f2] hover:scale-110 transition-all">
-                            <FaFacebook />
-                        </a>
-                        <a href="https://hackerrank.com/sbshihab2000" target="_blank" rel="noopener noreferrer" className="text-3xl text-text-muted hover:text-[#2ec866] hover:scale-110 transition-all">
-                            <FaHackerrank />
-                        </a>
-                    </div>
-                </motion.div>
+                    {/* Left Column: Info */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+                            Get In <span className="text-gradient">Touch</span>
+                        </h2>
+                        <p className="text-text-muted text-lg mb-10 max-w-md">
+                            Whether you have a project in mind, a question, or just want to say hi, I'm always open to new opportunities and collaborations.
+                        </p>
+
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-dark-bg transition-all duration-300 shadow-neon">
+                                    <FaEnvelope size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Email Me</p>
+                                    <a href="mailto:sbshihab2000@gmail.com" className="text-lg text-white font-medium hover:text-primary transition-colors">
+                                        sbshihab2000@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-neon">
+                                    <FaPhone size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Call Me</p>
+                                    <a href="tel:+8801790606985" className="text-lg text-white font-medium hover:text-secondary transition-colors">
+                                        +880 1790606985
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-emerald-400 group-hover:bg-emerald-400 group-hover:text-dark-bg transition-all duration-300 shadow-neon">
+                                    <FaMapMarkerAlt size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Location</p>
+                                    <p className="text-lg text-white font-medium">Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Right Column: Form */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="glass-panel p-8 md:p-10"
+                    >
+                        {submitted ? (
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="text-center py-10"
+                            >
+                                <div className="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <FaPaperPlane size={32} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                                <p className="text-text-muted">Thanks for reaching out. I'll get back to you soon.</p>
+                                <button
+                                    onClick={() => setSubmitted(false)}
+                                    className="mt-8 text-primary hover:underline font-medium"
+                                >
+                                    Send another message
+                                </button>
+                            </motion.div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-2">Name</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                        placeholder="Your Name"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="email" className="block text-sm font-medium text-text-muted mb-2">Email</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        placeholder="your@email.com"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-text-muted mb-2">Message</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        required
+                                        rows="4"
+                                        placeholder="How can I help you?"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                    ></textarea>
+                                </div>
+                                <motion.button
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    disabled={isSubmitting}
+                                    type="submit"
+                                    className={`w-full py-4 rounded-xl font-bold text-dark-bg transition-all shadow-lg ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e5ff00] hover:bg-[#d4ed00] shadow-[#e5ff00]/20'
+                                        }`}
+                                >
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                </motion.button>
+                            </form>
+                        )}
+                    </motion.div>
+                </div>
             </div>
         </section>
     );
