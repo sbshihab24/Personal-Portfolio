@@ -69,8 +69,8 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar: Copyright */}
-                <div className="pt-10 border-t border-white/5 text-center">
-                    <p className="text-xl md:text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#00FFFF] to-[#3B82F6] drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]">
+                <div className="pt-12 border-t border-white/5 text-center">
+                    <p className="text-lg md:text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]">
                         © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
                     </p>
                 </div>
