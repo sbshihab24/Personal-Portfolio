@@ -136,7 +136,7 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-lg font-semibold text-secondary mb-2">Name</label>
+                                    <label htmlFor="name" className="block text-xl font-bold text-secondary mb-3">Name</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -148,7 +148,7 @@ const Contact = () => {
                                 </div>
                                 <input type="hidden" name="subject" value="New Portfolio Message from Shihab.AI" />
                                 <div>
-                                    <label htmlFor="email" className="block text-lg font-semibold text-secondary mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-xl font-bold text-secondary mb-3">Email</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -159,13 +159,13 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-lg font-semibold text-secondary mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-xl font-bold text-secondary mb-3">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
                                         rows="4"
-                                        placeholder="How can I help you?"
+                                        placeholder="Tell me about your project..."
                                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all"
                                     ></textarea>
                                 </div>
