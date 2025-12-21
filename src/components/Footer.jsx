@@ -28,19 +28,19 @@ const Footer = () => {
 
                     {/* Column 2: Quick Info */}
                     <div className="space-y-4">
-                        <div className="flex items-center gap-4 text-text-muted group">
+                        <div className="flex items-center gap-4 text-white/70 group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-all">
                                 <FaMapMarkerAlt />
                             </div>
                             <span className="text-sm">Dhaka, Bangladesh</span>
                         </div>
-                        <div className="flex items-center gap-4 text-text-muted group">
+                        <div className="flex items-center gap-4 text-white/70 group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-secondary/10 group-hover:text-secondary transition-all">
                                 <FaPhone />
                             </div>
                             <span className="text-sm">+880 1790606985</span>
                         </div>
-                        <div className="flex items-center gap-4 text-text-muted group">
+                        <div className="flex items-center gap-4 text-white/70 group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-all">
                                 <FaEnvelope />
                             </div>
