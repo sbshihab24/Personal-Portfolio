@@ -31,15 +31,15 @@ const featuredProjects = [
         github: "https://github.com/sbshihab24/IELTS-Writing-Test",
         gradient: "from-orange-500 to-red-500"
     }
-    
+
 ];
 
 const otherProjects = [
     { name: "AI RAG Multi-Tenant MVP", desc: "Enterprise-ready multi-tenant RAG system for isolated document retrieval.", link: "https://github.com/sbshihab24/AI-Rag-Multi-Tenant-MVP" },
     { name: "AI Document Editor", desc: "Smart document editor for context-aware rewriting.", link: "https://github.com/sbshihab24/AI-Powered-Document-Editor" },
     { name: "Helmet Detection", desc: "Real-time safety compliance using YOLO.", link: "#" },
-    { name: "Facial Emotion Recognition", desc: "CNN-based emotion analysis.", link: "#" },
-    { name: "Book Recommender", desc: "Collab filtering recommendation engine.", link: "#" },
+    { name: "Facial Emotion Recognition", desc: "CNN-based emotion analysis.", link: "https://github.com/sbshihab24/Facial-Emotion-Recognition" },
+    { name: "Book Recommender", desc: "Collab filtering recommendation engine.", link: "https://github.com/sbshihab24/Book-Recommender-System" },
     { name: "School Management", desc: "Full-stack React academic portal.", link: "#" }
 ];
 

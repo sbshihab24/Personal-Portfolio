@@ -27,8 +27,8 @@ An NLP-powered system offering detailed feedback on IELTS essays. Analyzes coher
 - **[AI RAG Multi-Tenant MVP](https://github.com/sbshihab24/AI-Rag-Multi-Tenant-MVP)**: Enterprise-ready multi-tenant RAG system for isolated document retrieval.
 - **[AI Document Editor](https://github.com/sbshihab24/AI-Powered-Document-Editor)**: Smart document editor for context-aware rewriting.
 - **Helmet Detection**: Real-time safety compliance using YOLO.
-- **Facial Emotion Recognition**: CNN-based emotion analysis.
-- **Book Recommender**: Collab filtering recommendation engine.
+- **[Facial Emotion Recognition](https://github.com/sbshihab24/Facial-Emotion-Recognition)**: CNN-based emotion analysis.
+- **[Book Recommender](https://github.com/sbshihab24/Book-Recommender-System)**: Collab filtering recommendation engine.
 - **School Management**: Full-stack React academic portal.
 
 ---
