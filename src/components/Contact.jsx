@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
+// Web3Forms Access Key
+const WEB3FORMS_KEY = "0b1a2640-2324-4539-8227-5d7ca480b163";
+
 const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
@@ -11,9 +14,7 @@ const Contact = () => {
         setIsSubmitting(true);
         const formData = new FormData(e.target);
 
-
-        // Use your Web3Forms Access Key here
-        formData.append("access_key", "0b1a2640-2324-4539-8227-5d7ca480b163");
+        formData.append("access_key", WEB3FORMS_KEY);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -135,37 +136,37 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-lg font-bold text-secondary mb-2">Name</label>
+                                    <label htmlFor="name" className="block text-lg font-bold text-purple-400 mb-2">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
                                         placeholder="Your Name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-secondary transition-all"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     />
                                 </div>
                                 <input type="hidden" name="subject" value="New Portfolio Message from Shihab.AI" />
                                 <div>
-                                    <label htmlFor="email" className="block text-lg font-bold text-secondary mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-lg font-bold text-purple-400 mb-2">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
-                                        placeholder="email@example.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-secondary transition-all"
+                                        placeholder="your@email.com"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-lg font-bold text-secondary mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-lg font-bold text-purple-400 mb-2">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
                                         rows="4"
-                                        placeholder="How can I help you?"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-secondary transition-all"
+                                        placeholder="Tell me about your project..."
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     ></textarea>
                                 </div>
                                 <motion.button
