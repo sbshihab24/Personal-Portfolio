@@ -1,54 +1,62 @@
-# Portfolio Website (React + Tailwind)
+# Mehedi Hasan Shihab | AI Developer & ML Engineer
 
-This is a personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**. It features a modern dark-themed design, smooth scrolling, and full responsiveness.
+Welcome to my personal portfolio! I am a CSE graduate and Junior AI Developer specialized in building scalable AI solutions, from Computer Vision systems to Autonomous Agents and RAG pipelines.
 
-## 🚀 Features
-- **Modern UI**: Dark mode, Glassmorphism, and Animations (Framer Motion).
-- **Responsive**: Fully optimized for Mobile, Tablet, and Desktop.
-- **Sections**: Home, About, Skills, Experience, Projects, Contact.
-- **Interactive**: Scrollspy navigation, mobile menu, and hover effects.
+## 🚀 Featured Projects
+
+### [Agentic AI System](https://github.com/sbshihab24/Agentic--AI)
+A modular autonomous multi-agent system capable of reasoning, planning, and executing complex tasks. Features Contextual Memory and Tool use.
+- **Tech**: Python, LangChain, LLM APIs
+
+### [MedAssist AI](https://github.com/sbshihab24/Med-Assistant-AI)
+Production-grade medical chatbot featuring GPT-4o Vision for prescription OCR and a dedicated Medical News Agent.
+- **Tech**: Python, Flask, OpenAI API, GPT-4o
+
+### [Voice-Agent AI](https://github.com/sbshihab24/Voice-Agent)
+Real-time voice-driven interactive AI that processes speech, understands intent, and responds vocally using STT + LLM + TTS pipelines.
+- **Tech**: Python, SpeechRecognition, Transformers
+
+### [IELTS Writing Evaluator](https://github.com/sbshihab24/IELTS-Writing-Test)
+An NLP-powered system offering detailed feedback on IELTS essays. Analyzes coherence, grammar, and vocabulary to predict band scores.
+- **Tech**: Python, NLP, BERT
+
+---
+
+## 📂 Other Noteworthy Projects
+
+- **[AI RAG Multi-Tenant MVP](https://github.com/sbshihab24/AI-Rag-Multi-Tenant-MVP)**: Enterprise-ready multi-tenant RAG system for isolated document retrieval.
+- **[AI Document Editor](https://github.com/sbshihab24/AI-Powered-Document-Editor)**: Smart document editor for context-aware rewriting.
+- **Helmet Detection**: Real-time safety compliance using YOLO.
+- **Facial Emotion Recognition**: CNN-based emotion analysis.
+- **Book Recommender**: Collab filtering recommendation engine.
+- **School Management**: Full-stack React academic portal.
+
+---
 
 ## 🛠 Tech Stack
--   [React](https://react.dev/)
--   [Vite](https://vitejs.dev/)
--   [Tailwind CSS](https://tailwindcss.com/)
--   [Framer Motion](https://www.framer.com/motion/)
+
+- **Frameworks**: React, Vite, Tailwind CSS, Flask
+- **AI/ML**: Python, TensorFlow, PyTorch, LangChain, OpenAI API
+- **Tools**: Git, Docker, Vector Databases
+
+---
+
+## 🌐 Connect With Me
+
+- **LinkedIn**: [shihab24](https://www.linkedin.com/in/shihab24)
+- **GitHub**: [sbshihab24](https://github.com/sbshihab24)
+- **Facebook**: [Mehedi Hasan Shihab](https://www.facebook.com/mh.shihab.370)
+- **Email**: [sbshihab2000@gmail.com](mailto:sbshihab2000@gmail.com)
+- **Phone**: +880 1790606985
+
+---
 
 ## 🏃‍♂️ Running Locally
 
-1.  **Install Dependencies**:
-    ```bash
-    npm install
-    ```
+1.  **Install Dependencies**: `npm install`
+2.  **Start Dev Server**: `npm run dev`
+3.  **Build for Production**: `npm run build`
 
-2.  **Start Dev Server**:
-    ```bash
-    npm run dev
-    ```
-    Open [http://localhost:5173](http://localhost:5173) in your browser.
+---
 
-## 📦 Deployment
-
-### GitHub Pages
-This project is pre-configured for GitHub Pages.
-
-1.  **Update `vite.config.js`** (Optional):
-    If you are deploying to a user site (`username.github.io`), mostly fine.
-    If deploying to a repo (`username.github.io/repo-name`), ensure `base: '/repo-name/'` in `vite.config.js`.
-    *Current config uses `base: './'` which handles most relative path cases.*
-
-2.  **Deploy Command**:
-    ```bash
-    npm run deploy
-    ```
-    This script runs `npm run build` and then pushes the `dist` folder to the `gh-pages` branch.
-
-### Netlify / Vercel
-Connect your GitHub repository to Netlify or Vercel. The settings are auto-detected:
--   **Build Command**: `npm run build`
--   **Publish Directory**: `dist`
-
-## 📁 Project Structure
--   `src/components/`: Reusable UI sections (Hero, About, etc.)
--   `src/index.css`: Tailwind imports and global styles.
--   `tailwind.config.js`: Custom theme configuration (colors, fonts).
+© 2024 Mehedi Hasan Shihab. Built with React & Tailwind.

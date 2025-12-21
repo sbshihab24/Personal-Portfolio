@@ -11,6 +11,13 @@ const featuredProjects = [
         gradient: "from-blue-500 to-cyan-500"
     },
     {
+        title: "MedAssist AI",
+        description: "Production-grade medical chatbot featuring GPT-4o Vision for prescription OCR and a dedicated Medical News Agent.",
+        tech: ["Python", "Flask", "OpenAI API", "GPT-4o"],
+        github: "https://github.com/sbshihab24/Med-Assistant-AI",
+        gradient: "from-blue-400 to-emerald-500"
+    },
+    {
         title: "Voice-Agent AI",
         description: "Real-time voice-driven interactive AI that processes speech, understands intent, and responds vocally using STT + LLM + TTS pipelines.",
         tech: ["Python", "SpeechRecognition", "Transformers"],
@@ -23,17 +30,13 @@ const featuredProjects = [
         tech: ["Python", "NLP", "BERT"],
         github: "https://github.com/sbshihab24/IELTS-Writing-Test",
         gradient: "from-orange-500 to-red-500"
-    },
-    {
-        title: "AI Document Editor",
-        description: "Smart document editor that rewrites, summarizes, and translates text while preserving context. Built for efficiency and content enhancement.",
-        tech: ["Streamlit", "LLM APIs", "Python"],
-        github: "https://github.com/sbshihab24/AI-Powered-Document-Editor",
-        gradient: "from-emerald-500 to-teal-500"
     }
+    
 ];
 
 const otherProjects = [
+    { name: "AI RAG Multi-Tenant MVP", desc: "Enterprise-ready multi-tenant RAG system for isolated document retrieval.", link: "https://github.com/sbshihab24/AI-Rag-Multi-Tenant-MVP" },
+    { name: "AI Document Editor", desc: "Smart document editor for context-aware rewriting.", link: "https://github.com/sbshihab24/AI-Powered-Document-Editor" },
     { name: "Helmet Detection", desc: "Real-time safety compliance using YOLO.", link: "#" },
     { name: "Facial Emotion Recognition", desc: "CNN-based emotion analysis.", link: "#" },
     { name: "Book Recommender", desc: "Collab filtering recommendation engine.", link: "#" },
