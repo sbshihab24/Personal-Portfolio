@@ -11,7 +11,9 @@ const Contact = () => {
         setIsSubmitting(true);
         const formData = new FormData(e.target);
 
-        formData.append("access_key", "0b1a2640-2324-4539-8227-5d7ca480b163"); // Fixed Key
+
+        // Use your Web3Forms Access Key here
+        formData.append("access_key", "0b1a2640-2324-4539-8227-5d7ca480b163");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -133,37 +135,37 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-4xl font-black text-[#B066FF] mb-6 tracking-tighter drop-shadow-[0_0_10px_rgba(176,102,255,0.3)]">Name</label>
+                                    <label htmlFor="name" className="block text-xl font-semibold text-secondary mb-3">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
-                                        placeholder="What's your name?"
-                                        className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-8 py-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#B066FF] transition-all text-2xl shadow-inner-xl"
+                                        placeholder="Your Name"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     />
                                 </div>
                                 <input type="hidden" name="subject" value="New Portfolio Message from Shihab.AI" />
                                 <div>
-                                    <label htmlFor="email" className="block text-4xl font-black text-[#B066FF] mb-6 tracking-tighter drop-shadow-[0_0_10px_rgba(176,102,255,0.3)]">Email</label>
+                                    <label htmlFor="email" className="block text-xl font-semibold text-secondary mb-3">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
-                                        placeholder="Where can I reach you?"
-                                        className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-8 py-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#B066FF] transition-all text-2xl shadow-inner-xl"
+                                        placeholder="email@example.com"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-4xl font-black text-[#B066FF] mb-6 tracking-tighter drop-shadow-[0_0_10px_rgba(176,102,255,0.3)]">Message</label>
+                                    <label htmlFor="message" className="block text-xl font-semibold text-secondary mb-3">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
-                                        rows="6"
-                                        placeholder="I'm interested in working with you..."
-                                        className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-8 py-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#B066FF] transition-all text-2xl shadow-inner-xl"
+                                        rows="4"
+                                        placeholder="How can I help you?"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     ></textarea>
                                 </div>
                                 <motion.button
