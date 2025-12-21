@@ -133,36 +133,37 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-3xl font-extrabold text-[#9933FF] mb-5 tracking-tight">Name</label>
+                                    <label htmlFor="name" className="block text-4xl font-black text-[#B066FF] mb-6 tracking-tighter drop-shadow-[0_0_10px_rgba(176,102,255,0.3)]">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
-                                        placeholder="Enter your full name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#9933FF] transition-all text-xl"
+                                        placeholder="What's your name?"
+                                        className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-8 py-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#B066FF] transition-all text-2xl shadow-inner-xl"
                                     />
                                 </div>
+                                <input type="hidden" name="subject" value="New Portfolio Message from Shihab.AI" />
                                 <div>
-                                    <label htmlFor="email" className="block text-3xl font-extrabold text-[#9933FF] mb-5 tracking-tight">Email</label>
+                                    <label htmlFor="email" className="block text-4xl font-black text-[#B066FF] mb-6 tracking-tighter drop-shadow-[0_0_10px_rgba(176,102,255,0.3)]">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
-                                        placeholder="shihab@example.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#9933FF] transition-all text-xl"
+                                        placeholder="Where can I reach you?"
+                                        className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-8 py-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#B066FF] transition-all text-2xl shadow-inner-xl"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-3xl font-extrabold text-[#9933FF] mb-5 tracking-tight">Message</label>
+                                    <label htmlFor="message" className="block text-4xl font-black text-[#B066FF] mb-6 tracking-tighter drop-shadow-[0_0_10px_rgba(176,102,255,0.3)]">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
                                         rows="6"
                                         placeholder="I'm interested in working with you..."
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white placeholder:text-white/30 focus:outline-none focus:border-[#9933FF] transition-all text-xl shadow-inner-xl"
+                                        className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-8 py-6 text-white placeholder:text-white/20 focus:outline-none focus:border-[#B066FF] transition-all text-2xl shadow-inner-xl"
                                     ></textarea>
                                 </div>
                                 <motion.button
