@@ -21,9 +21,6 @@ const Footer = () => {
                             <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
                             <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
                         </nav>
-                        <p className="text-sm text-white/70">
-                            © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
-                        </p>
                     </div>
 
                     {/* Column 2: Quick Info */}
@@ -69,6 +66,13 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
+                </div>
+
+                {/* Bottom Bar: Copyright */}
+                <div className="pt-8 border-t border-white/5 text-center">
+                    <p className="text-base text-primary font-medium tracking-wide">
+                        © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
+                    </p>
                 </div>
             </div>
         </footer>

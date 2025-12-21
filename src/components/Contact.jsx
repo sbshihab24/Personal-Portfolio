@@ -11,7 +11,7 @@ const Contact = () => {
         setIsSubmitting(true);
         const formData = new FormData(e.target);
 
-        formData.append("access_key", "01d0c410-6184-4869-9388-7e3e7a0776b6"); // Public Demo Key
+        formData.append("access_key", "0b1a2640-2324-4539-8227-5d7ca480b1636"); // Public Demo Key
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -133,36 +133,36 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">Name</label>
+                                    <label htmlFor="name" className="block text-xl font-bold text-secondary mb-3">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
                                         placeholder="Your Name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-xl font-bold text-secondary mb-3">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
                                         placeholder="your@email.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-xl font-bold text-secondary mb-3">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
                                         rows="4"
                                         placeholder="How can I help you?"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary/50 transition-colors"
                                     ></textarea>
                                 </div>
                                 <motion.button
