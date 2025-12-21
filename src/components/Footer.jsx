@@ -14,33 +14,33 @@ const Footer = () => {
                             <FaCode className="text-primary" />
                             <span>Shihab<span className="text-primary">.AI</span></span>
                         </div>
-                        <nav className="flex flex-wrap gap-4 text-sm font-medium text-white/60">
+                        <nav className="flex flex-wrap gap-4 text-sm font-medium text-white/90">
                             <a href="/#home" className="hover:text-primary transition-colors">Home</a>
                             <a href="/#about" className="hover:text-primary transition-colors">About</a>
                             <a href="/#projects" className="hover:text-primary transition-colors">Projects</a>
                             <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
                             <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
                         </nav>
-                        <p className="text-sm text-white/50">
+                        <p className="text-sm text-white/70">
                             © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
                         </p>
                     </div>
 
                     {/* Column 2: Quick Info */}
                     <div className="space-y-4">
-                        <div className="flex items-center gap-4 text-white/70 group">
+                        <div className="flex items-center gap-4 text-white group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-all">
                                 <FaMapMarkerAlt />
                             </div>
                             <span className="text-sm">Dhaka, Bangladesh</span>
                         </div>
-                        <div className="flex items-center gap-4 text-white/70 group">
+                        <div className="flex items-center gap-4 text-white group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-secondary/10 group-hover:text-secondary transition-all">
                                 <FaPhone />
                             </div>
                             <span className="text-sm">+880 1790606985</span>
                         </div>
-                        <div className="flex items-center gap-4 text-white/70 group">
+                        <div className="flex items-center gap-4 text-white group">
                             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-all">
                                 <FaEnvelope />
                             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                     {/* Column 3: About & Socials */}
                     <div className="space-y-6">
                         <h4 className="text-white font-semibold text-lg uppercase tracking-wider">About Me</h4>
-                        <p className="text-sm text-white/60 leading-relaxed font-light">
+                        <p className="text-sm text-white/80 leading-relaxed font-light">
                             Passionate Developer focused on building intelligent agents, scalable systems, and intuitive user experiences.
                         </p>
                         <div className="flex gap-4">
