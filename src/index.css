@@ -41,4 +41,16 @@
   .btn-outline {
     @apply border border-primary text-primary hover:bg-primary/10;
   }
+
+  .social-icon-btn {
+    @apply p-4 bg-white/5 rounded-2xl text-white hover:bg-primary hover:text-dark-bg hover:scale-110 transition-all duration-300;
+  }
+
+  .shadow-neon {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  }
+
+  .shadow-neon-strong {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  }
 }

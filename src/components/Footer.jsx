@@ -1,74 +1,180 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope, FaPhone } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
 const Footer = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        const formData = new FormData(e.target);
+
+        // Using Web3Forms - you can replace the access_key with your own if you get one
+        formData.append("access_key", "01d0c410-6184-4869-9388-7e3e7a0776b6"); // Public Demo Key
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setSubmitted(true);
+            e.target.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+        setIsSubmitting(false);
+    };
+
     return (
-        <footer id="contact" className="bg-dark-bg/80 border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+        <footer id="contact" className="bg-dark-bg/80 border-t border-white/10 pt-24 pb-12 relative overflow-hidden">
+            {/* Background Glows */}
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
-            {/* Soft gradient glow behind */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-bg/50 to-black opacity-80 pointer-events-none"></div>
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-            <div className="container mx-auto px-6 text-center relative z-10">
-
-                {/* Footer Title */}
-                <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-teal-300 via-blue-400 to-purple-500 bg-clip-text text-transparent tracking-tight mb-10">
-                    Get In Touch
-                </h2>
-
-                {/* Contact Info */}
-                <div className="flex flex-wrap justify-center gap-10 mb-12 text-lg">
-                    <a
-                        href="mailto:sbshihab2000@gmail.com"
-                        className="flex items-center gap-2 text-text-muted hover:text-primary transition-colors duration-300"
+                    {/* Left Column: Info */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                     >
-                        <FaEnvelope size={20} />
-                        sbshihab2000@gmail.com
-                    </a>
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
+                            Get In <span className="text-gradient">Touch</span>
+                        </h2>
+                        <p className="text-text-muted text-lg mb-10 max-w-md">
+                            Whether you have a project in mind, a question, or just want to say hi, I'm always open to new opportunities and collaborations.
+                        </p>
 
-                    <a
-                        href="tel:+8801790606985"
-                        className="flex items-center gap-2 text-text-muted hover:text-primary transition-colors duration-300"
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-dark-bg transition-all duration-300 shadow-neon">
+                                    <FaEnvelope size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Email Me</p>
+                                    <a href="mailto:sbshihab2000@gmail.com" className="text-lg text-white font-medium hover:text-primary transition-colors">
+                                        sbshihab2000@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-neon">
+                                    <FaPhone size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Call Me</p>
+                                    <a href="tel:+8801790606985" className="text-lg text-white font-medium hover:text-secondary transition-colors">
+                                        +880 1790606985
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-emerald-400 group-hover:bg-emerald-400 group-hover:text-dark-bg transition-all duration-300 shadow-neon">
+                                    <FaMapMarkerAlt size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Location</p>
+                                    <p className="text-lg text-white font-medium">Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Social Links Updated Row */}
+                        <div className="flex gap-4 mt-12">
+                            <a href="https://github.com/sbshihab24" target="_blank" rel="noopener noreferrer" className="social-icon-btn"><FaGithub size={20} /></a>
+                            <a href="https://www.linkedin.com/in/shihab24" target="_blank" rel="noopener noreferrer" className="social-icon-btn"><FaLinkedin size={20} /></a>
+                            <a href="https://www.facebook.com/mh.shihab.370" target="_blank" rel="noopener noreferrer" className="social-icon-btn"><FaFacebook size={20} /></a>
+                        </div>
+                    </motion.div>
+
+                    {/* Right Column: Form */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="glass-panel p-8 md:p-10"
                     >
-                        <FaPhone size={20} />
-                        +880 1790606985
-                    </a>
+                        {submitted ? (
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="text-center py-10"
+                            >
+                                <div className="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <FaPaperPlane size={32} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                                <p className="text-text-muted">Thanks for reaching out. I'll get back to you soon.</p>
+                                <button
+                                    onClick={() => setSubmitted(false)}
+                                    className="mt-8 text-primary hover:underline font-medium"
+                                >
+                                    Send another message
+                                </button>
+                            </motion.div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-2">Name</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                        placeholder="Your Name"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="email" className="block text-sm font-medium text-text-muted mb-2">Email</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        placeholder="your@email.com"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                    />
+                                </div>
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-text-muted mb-2">Message</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        required
+                                        rows="4"
+                                        placeholder="How can I help you?"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                    ></textarea>
+                                </div>
+                                <motion.button
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    disabled={isSubmitting}
+                                    type="submit"
+                                    className={`w-full py-4 rounded-xl font-bold text-dark-bg transition-all shadow-lg ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e5ff00] hover:bg-[#d4ed00] shadow-[#e5ff00]/20'
+                                        }`}
+                                >
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                </motion.button>
+                            </form>
+                        )}
+                    </motion.div>
                 </div>
 
-                {/* Social Icons */}
-                <div className="flex justify-center gap-8 mb-16">
-                    <a
-                        href="https://github.com/sbshihab24"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-4 bg-white/5 rounded-full text-white hover:bg-primary hover:text-dark-bg hover:scale-110 transition-all duration-300 shadow-neon-hover"
-                    >
-                        <FaGithub size={24} />
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/shihab24"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-4 bg-white/5 rounded-full text-white hover:bg-[#0077b5] hover:text-white hover:scale-110 transition-all duration-300 shadow-neon-hover"
-                    >
-                        <FaLinkedin size={24} />
-                    </a>
-
-                    <a
-                        href="https://www.facebook.com/mh.shihab.370"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-4 bg-white/5 rounded-full text-white hover:bg-[#1877f2] hover:text-white hover:scale-110 transition-all duration-300 shadow-neon-hover"
-                    >
-                        <FaFacebook size={24} />
-                    </a>
-                </div>
-
-                {/* Copyright Line */}
-                <div className="border-t border-white/10 pt-6 text-sm text-text-muted">
-                    <p>
-                        © {new Date().getFullYear()} Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
-                    </p>
+                {/* Bottom Bar */}
+                <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted">
+                    <p>© {new Date().getFullYear()} Mehedi Hasan Shihab. All rights reserved.</p>
+                    <p>Built with React & Tailwind</p>
                 </div>
             </div>
         </footer>
