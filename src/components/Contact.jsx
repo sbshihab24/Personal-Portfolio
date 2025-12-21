@@ -54,7 +54,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-text-muted text-lg max-w-2xl mx-auto"
+                        className="text-white/70 text-lg max-w-2xl mx-auto"
                     >
                         Whether you have a project in mind, a question, or just want to say hi, I'm always open to new opportunities and collaborations.
                     </motion.p>
@@ -74,7 +74,7 @@ const Contact = () => {
                                     <FaEnvelope size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Email Me</p>
+                                    <p className="text-xs text-white/50 uppercase tracking-widest mb-1">Email Me</p>
                                     <a href="mailto:sbshihab2000@gmail.com" className="text-lg text-white font-medium hover:text-primary transition-colors">
                                         sbshihab2000@gmail.com
                                     </a>
@@ -86,7 +86,7 @@ const Contact = () => {
                                     <FaPhone size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Call Me</p>
+                                    <p className="text-xs text-white/50 uppercase tracking-widest mb-1">Call Me</p>
                                     <a href="tel:+8801790606985" className="text-lg text-white font-medium hover:text-secondary transition-colors">
                                         +880 1790606985
                                     </a>
@@ -98,7 +98,7 @@ const Contact = () => {
                                     <FaMapMarkerAlt size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Location</p>
+                                    <p className="text-xs text-white/50 uppercase tracking-widest mb-1">Location</p>
                                     <p className="text-lg text-white font-medium">Dhaka, Bangladesh</p>
                                 </div>
                             </div>
@@ -133,36 +133,36 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-2">Name</label>
+                                    <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
                                         placeholder="Your Name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-text-muted mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
                                         placeholder="your@email.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-colors"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-text-muted mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
                                         rows="4"
                                         placeholder="How can I help you?"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-colors"
                                     ></textarea>
                                 </div>
                                 <motion.button
