@@ -70,7 +70,7 @@ const Footer = () => {
 
                 {/* Bottom Bar: Copyright */}
                 <div className="pt-12 border-t border-white/5 text-center">
-                    <p className="text-lg md:text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]">
+                    <p className="text-sm md:text-base font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]">
                         © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
                     </p>
                 </div>
