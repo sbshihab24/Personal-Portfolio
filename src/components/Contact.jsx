@@ -40,6 +40,26 @@ const Contact = () => {
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
+                <div className="text-center mb-16">
+                    <motion.h2
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6"
+                    >
+                        Get In <span className="text-gradient">Touch</span>
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-text-muted text-lg max-w-2xl mx-auto"
+                    >
+                        Whether you have a project in mind, a question, or just want to say hi, I'm always open to new opportunities and collaborations.
+                    </motion.p>
+                </div>
+
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
 
                     {/* Left Column: Info */}
@@ -48,13 +68,6 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
-                            Get In <span className="text-gradient">Touch</span>
-                        </h2>
-                        <p className="text-text-muted text-lg mb-10 max-w-md">
-                            Whether you have a project in mind, a question, or just want to say hi, I'm always open to new opportunities and collaborations.
-                        </p>
-
                         <div className="space-y-8">
                             <div className="flex items-center gap-6 group">
                                 <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-dark-bg transition-all duration-300 shadow-neon">

@@ -12,16 +12,16 @@ const Footer = () => {
                     <div className="space-y-6">
                         <div className="flex items-center gap-2 text-white font-bold text-2xl">
                             <FaCode className="text-primary" />
-                            <span>Shihab<span className="text-primary">.dev</span></span>
+                            <span>Shihab<span className="text-primary">.AI</span></span>
                         </div>
-                        <nav className="flex flex-wrap gap-4 text-sm font-medium text-text-muted">
+                        <nav className="flex flex-wrap gap-4 text-sm font-medium text-white/60">
                             <a href="/#home" className="hover:text-primary transition-colors">Home</a>
                             <a href="/#about" className="hover:text-primary transition-colors">About</a>
                             <a href="/#projects" className="hover:text-primary transition-colors">Projects</a>
                             <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
                             <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
                         </nav>
-                        <p className="text-xs text-text-muted/60">
+                        <p className="text-sm text-white/50">
                             © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
                         </p>
                     </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                     {/* Column 3: About & Socials */}
                     <div className="space-y-6">
                         <h4 className="text-white font-semibold text-lg uppercase tracking-wider">About Me</h4>
-                        <p className="text-sm text-text-muted leading-relaxed">
+                        <p className="text-sm text-white/60 leading-relaxed font-light">
                             Passionate Developer focused on building intelligent agents, scalable systems, and intuitive user experiences.
                         </p>
                         <div className="flex gap-4">
