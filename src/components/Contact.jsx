@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaYoutube } from 'react-icons/fa';
 
 // Web3Forms Access Key
 const WEB3FORMS_KEY = "0b1a2640-2324-4539-8227-5d7ca480b163";
@@ -105,6 +105,18 @@ const Contact = () => {
                                     <p className="text-lg text-white font-medium">Dhaka, Bangladesh</p>
                                 </div>
                             </div>
+
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-red-500 group-hover:bg-red-500 group-hover:text-white transition-all duration-300 shadow-neon">
+                                    <FaYoutube size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-white/50 uppercase tracking-widest mb-1">YouTube</p>
+                                    <a href="https://www.youtube.com/@sbshihab6969" target="_blank" rel="noopener noreferrer" className="text-lg text-white font-medium hover:text-red-500 transition-colors">
+                                        SB Shihab
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
 
@@ -113,7 +125,7 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="glass-panel p-8 md:p-10"
+                        className="glass-panel p-6 md:p-8"
                     >
                         {submitted ? (
                             <motion.div
@@ -136,37 +148,37 @@ const Contact = () => {
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-xl font-bold text-secondary mb-3">Name</label>
+                                    <label htmlFor="name" className="block text-lg font-bold text-secondary mb-2">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
                                         placeholder="Your Name"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all text-base"
                                     />
                                 </div>
                                 <input type="hidden" name="subject" value="New Portfolio Message from Shihab.AI" />
                                 <div>
-                                    <label htmlFor="email" className="block text-xl font-bold text-secondary mb-3">Email</label>
+                                    <label htmlFor="email" className="block text-lg font-bold text-secondary mb-2">Email</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
                                         placeholder="your@email.com"
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all text-base"
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-xl font-bold text-secondary mb-3">Message</label>
+                                    <label htmlFor="message" className="block text-lg font-bold text-secondary mb-2">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         required
-                                        rows="4"
+                                        rows="3"
                                         placeholder="Tell me about your project..."
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-secondary transition-all text-base"
                                     ></textarea>
                                 </div>
                                 <motion.button
