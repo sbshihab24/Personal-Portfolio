@@ -85,9 +85,15 @@ const Skills = () => {
                                 y: -10,
                                 rotateX: 5,
                                 rotateY: -5,
-                                z: 50
+                                z: 20
                             }}
-                            className="glass-panel p-8 hover:border-white/20 transition-all duration-300 group shadow-neon hover:shadow-neon-strong"
+                            whileTap={{
+                                scale: 1.12,
+                                rotateX: 0,
+                                rotateY: 0,
+                                z: 100
+                            }}
+                            className="glass-panel p-8 hover:border-white/20 transition-all duration-300 group shadow-neon hover:shadow-neon-strong cursor-pointer"
                         >
                             <div className={`flex items-center gap-4 mb-8 ${category.color}`}>
                                 <div className="p-4 bg-white/5 rounded-2xl text-3xl group-hover:scale-110 transition-transform duration-300 shadow-neon">

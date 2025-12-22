@@ -73,9 +73,15 @@ const Projects = () => {
                                 y: -10,
                                 rotateX: 5,
                                 rotateY: 5,
-                                z: 50
+                                z: 20
                             }}
-                            className="glass-panel p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-neon hover:shadow-neon-strong"
+                            whileTap={{
+                                scale: 1.12,
+                                rotateX: 0,
+                                rotateY: 0,
+                                z: 100
+                            }}
+                            className="glass-panel p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-neon hover:shadow-neon-strong cursor-pointer"
                         >
                             {/* Decorative Gradient Background */}
                             <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.gradient} opacity-10 rounded-bl-[100px] transition-opacity duration-300 group-hover:opacity-20`} />

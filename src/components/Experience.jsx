@@ -58,9 +58,15 @@ const Experience = () => {
                                 y: -10,
                                 rotateX: 5,
                                 rotateY: -5,
-                                z: 50
+                                z: 20
                             }}
-                            className="glass-panel p-8 hover:border-primary/30 transition-all duration-300 group shadow-neon hover:shadow-neon-strong"
+                            whileTap={{
+                                scale: 1.12,
+                                rotateX: 0,
+                                rotateY: 0,
+                                z: 100
+                            }}
+                            className="glass-panel p-8 hover:border-primary/30 transition-all duration-300 group shadow-neon hover:shadow-neon-strong cursor-pointer"
                         >
                             <div className="flex justify-between items-start mb-6">
                                 <div>
