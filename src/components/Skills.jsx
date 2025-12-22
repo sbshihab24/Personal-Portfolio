@@ -93,13 +93,13 @@ const Skills = () => {
                                 rotateY: 0,
                                 z: 100
                             }}
-                            className="glass-panel p-8 hover:border-white/20 transition-all duration-300 group shadow-neon hover:shadow-neon-strong cursor-pointer"
+                            className="glass-panel p-10 hover:border-white/20 transition-all duration-300 group shadow-neon hover:shadow-neon-strong cursor-pointer"
                         >
-                            <div className={`flex items-center gap-4 mb-8 ${category.color}`}>
-                                <div className="p-4 bg-white/5 rounded-2xl text-3xl group-hover:scale-110 transition-transform duration-300 shadow-neon">
+                            <div className={`flex items-center gap-6 mb-10 ${category.color}`}>
+                                <div className="p-5 bg-white/5 rounded-2xl text-4xl group-hover:scale-110 transition-transform duration-300 shadow-neon">
                                     {category.icon}
                                 </div>
-                                <h3 className="font-bold text-2xl text-white">{category.category}</h3>
+                                <h3 className="font-bold text-3xl text-white">{category.category}</h3>
                             </div>
 
                             <div className="flex flex-wrap gap-3">

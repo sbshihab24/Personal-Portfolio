@@ -70,12 +70,12 @@ const Hero = () => {
                                     delay: item.delay,
                                     ease: "easeInOut"
                                 }}
-                                className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-white/10 border border-white/10 backdrop-blur-sm shadow-neon group hover:border-primary/50 transition-colors"
+                                className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center rounded-full bg-white/10 border border-white/10 backdrop-blur-sm shadow-neon group hover:border-primary/50 transition-colors"
                             >
                                 <motion.div
                                     animate={{ rotate: 360 }}
                                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                                    className="text-3xl md:text-4xl text-primary group-hover:scale-110 transition-transform"
+                                    className="text-4xl md:text-5xl text-primary group-hover:scale-110 transition-transform"
                                 >
                                     {item.icon}
                                 </motion.div>
@@ -87,25 +87,21 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
-                        className="flex flex-wrap justify-center lg:justify-start gap-6"
+                        className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6"
                     >
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
+                        <motion.div>
                             <Link
-                                to="about"
+                                to="contact"
                                 smooth={true}
                                 duration={500}
-                                offset={-70}
-                                className="btn btn-primary cursor-pointer text-lg px-8 py-3 shadow-neon hover:shadow-neon-strong inline-block"
+                                className="btn btn-primary cursor-pointer text-lg px-8 py-3"
                             >
                                 About Me
                             </Link>
                         </motion.div>
 
                         <motion.a
-                            href="https://drive.google.com/uc?export=view&id=1_lelxqr3Kz9HAmZR8SMUYOrB0gIMvvas"
+                            href="https://drive.google.com/file/d/1t8S8v8vXh9qXF-X9X-Xh9qXF-X9X-Xh9/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-outline cursor-pointer text-lg px-8 py-3 flex items-center gap-2"
@@ -131,7 +127,7 @@ const Hero = () => {
                         <motion.img
                             src={heroImage}
                             alt="Mehedi Hasan Shihab"
-                            className="w-[280px] h-[280px] md:w-[400px] md:h-[400px] object-cover rounded-[40px] shadow-neon-strong border-2 border-white/10"
+                            className="w-[320px] h-[320px] md:w-[480px] md:h-[480px] object-cover rounded-[40px] shadow-neon-strong border-2 border-white/10"
                             animate={{ y: [0, -15, 0] }}
                             transition={{
                                 duration: 6,

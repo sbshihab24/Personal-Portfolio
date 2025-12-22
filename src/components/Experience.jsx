@@ -66,18 +66,18 @@ const Experience = () => {
                                 rotateY: 0,
                                 z: 100
                             }}
-                            className="glass-panel p-8 hover:border-primary/30 transition-all duration-300 group shadow-neon hover:shadow-neon-strong cursor-pointer"
+                            className="glass-panel p-10 hover:border-primary/30 transition-all duration-300 group shadow-neon hover:shadow-neon-strong cursor-pointer"
                         >
-                            <div className="flex justify-between items-start mb-6">
+                            <div className="flex justify-between items-start mb-8">
                                 <div>
-                                    <h3 className="text-2xl font-bold text-white mb-2">{exp.role}</h3>
+                                    <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">{exp.role}</h3>
                                     <a
                                         href={exp.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-primary hover:text-white transition-colors flex items-center gap-2 font-medium text-lg"
+                                        className="text-xl text-primary font-medium hover:underline flex items-center gap-2"
                                     >
-                                        <FaBriefcase className="text-sm" /> {exp.company}
+                                        {exp.company} <FaExternalLinkAlt className="text-sm" />
                                     </a>
                                 </div>
                                 <div className="text-right">

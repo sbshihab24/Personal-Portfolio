@@ -81,13 +81,13 @@ const Projects = () => {
                                 rotateY: 0,
                                 z: 100
                             }}
-                            className="glass-panel p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-neon hover:shadow-neon-strong cursor-pointer"
+                            className="glass-panel p-10 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-neon hover:shadow-neon-strong cursor-pointer"
                         >
                             {/* Decorative Gradient Background */}
-                            <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.gradient} opacity-10 rounded-bl-[100px] transition-opacity duration-300 group-hover:opacity-20`} />
+                            <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${project.gradient} opacity-10 rounded-bl-[100px] transition-opacity duration-300 group-hover:opacity-20`} />
 
-                            <div className="flex justify-between items-start mb-6 relative z-10">
-                                <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                            <div className="flex justify-between items-start mb-4 relative z-10">
+                                <h3 className="text-3xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h3>
                                 <a
                                     href={project.github}
                                     target="_blank"
