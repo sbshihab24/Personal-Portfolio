@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import { FaBrain, FaMicrochip, FaBolt } from 'react-icons/fa';
 import heroImage from '../assets/heroImage.png';
 import EmojiBurst from './EmojiBurst';
 
@@ -39,10 +40,47 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
-                        className="text-lg text-text-muted mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                        className="text-lg text-text-muted mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
                     >
                         Turning data into intelligence. I build scalable AI solutions, from Computer Vision systems to Autonomous Agents and LLM pipelines.
                     </motion.p>
+
+                    {/* Animated Tech Icons */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.55 }}
+                        className="flex justify-center lg:justify-start gap-6 mb-10"
+                    >
+                        {[
+                            { icon: <FaBrain />, color: "text-primary", delay: 0 },
+                            { icon: <FaMicrochip />, color: "text-secondary", delay: 0.2 },
+                            { icon: <FaBolt />, color: "text-primary", delay: 0.4 }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                animate={{
+                                    y: [0, -10, 0],
+                                    rotate: [0, 5, -5, 0]
+                                }}
+                                transition={{
+                                    duration: 4,
+                                    repeat: Infinity,
+                                    delay: item.delay,
+                                    ease: "easeInOut"
+                                }}
+                                className="w-16 h-16 flex items-center justify-center rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-neon group hover:border-primary/50 transition-colors"
+                            >
+                                <motion.div
+                                    animate={{ rotate: 360 }}
+                                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                                    className={`text-2xl ${item.color} group-hover:scale-110 transition-transform`}
+                                >
+                                    {item.icon}
+                                </motion.div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
