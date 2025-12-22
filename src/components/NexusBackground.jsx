@@ -9,8 +9,8 @@ const NexusBackground = () => {
         let animationFrameId;
 
         let particles = [];
-        const particleCount = 95; // Increased density for bolder look
-        const connectionDistance = 175;
+        const particleCount = 60; // Reduced for cleaner look
+        const connectionDistance = 190; // Increased to compensate for lower density
         const mouseRadius = 220;
 
         // Brand Palette: Vibrant Cyan and Purple
@@ -36,8 +36,8 @@ const NexusBackground = () => {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 4 + 1.5; // Bolder particle size
-                this.speedX = (Math.random() - 0.5) * 0.5;
-                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.8;
+                this.speedY = (Math.random() - 0.5) * 0.8;
 
                 this.shapeType = Math.floor(Math.random() * 3);
                 this.colorBase = colors[Math.floor(Math.random() * colors.length)];

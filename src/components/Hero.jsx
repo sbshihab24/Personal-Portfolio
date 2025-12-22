@@ -1,3 +1,6 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import { FaBrain, FaMicrochip, FaBolt, FaEye, FaRobot, FaLanguage } from 'react-icons/fa';
 import heroImage from '../assets/heroImage.png';
 import EmojiBurst from './EmojiBurst';
@@ -42,43 +45,41 @@ const Hero = () => {
                         Turning data into intelligence. I build scalable AI solutions, from Computer Vision systems to Autonomous Agents and LLM pipelines.
                     </motion.p>
 
-                    {/* Animated Tech Icons - 4 Areas */}
+                    {/* Animated Tech Icons - Cleaner Style */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.55 }}
-                        className="flex justify-center lg:justify-start gap-5 mb-10"
+                        className="flex justify-center lg:justify-start gap-8 mb-10"
                     >
                         {[
-                            { icon: <FaBrain />, label: "AI", color: "text-primary", delay: 0 },
-                            { icon: <FaRobot />, label: "ML", color: "text-secondary", delay: 0.1 },
-                            { icon: <FaEye />, label: "CV", color: "text-primary", delay: 0.2 },
-                            { icon: <FaLanguage />, label: "LLM", color: "text-secondary", delay: 0.3 }
+                            { icon: <FaBrain />, delay: 0 },
+                            { icon: <FaRobot />, delay: 0.1 },
+                            { icon: <FaEye />, delay: 0.2 },
+                            { icon: <FaLanguage />, delay: 0.3 }
                         ].map((item, index) => (
-                            <div key={index} className="flex flex-col items-center gap-2">
+                            <motion.div
+                                key={index}
+                                animate={{
+                                    y: [0, -8, 0],
+                                    rotate: [0, 3, -3, 0]
+                                }}
+                                transition={{
+                                    duration: 4,
+                                    repeat: Infinity,
+                                    delay: item.delay,
+                                    ease: "easeInOut"
+                                }}
+                                className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border border-white/10 shadow-neon group hover:border-primary/50 transition-colors"
+                            >
                                 <motion.div
-                                    animate={{
-                                        y: [0, -8, 0],
-                                        rotate: [0, 3, -3, 0]
-                                    }}
-                                    transition={{
-                                        duration: 4,
-                                        repeat: Infinity,
-                                        delay: item.delay,
-                                        ease: "easeInOut"
-                                    }}
-                                    className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-[2px] shadow-neon group hover:border-primary/50 transition-colors"
+                                    animate={{ rotate: 360 }}
+                                    transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                                    className="text-3xl md:text-4xl text-primary group-hover:scale-110 transition-transform"
                                 >
-                                    <motion.div
-                                        animate={{ rotate: 360 }}
-                                        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                                        className={`text-xl md:text-2xl ${item.color} group-hover:scale-110 transition-transform`}
-                                    >
-                                        {item.icon}
-                                    </motion.div>
+                                    {item.icon}
                                 </motion.div>
-                                <span className="text-[10px] md:text-xs font-bold text-text-muted uppercase tracking-wider">{item.label}</span>
-                            </div>
+                            </motion.div>
                         ))}
                     </motion.div>
 
