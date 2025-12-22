@@ -42,7 +42,7 @@ const approachSteps = [
 
 const Approach = () => {
     return (
-        <section id="approach" className="py-24 relative overflow-hidden bg-black/20">
+        <section id="approach" className="py-20 relative overflow-hidden bg-black/20">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -50,10 +50,10 @@ const Approach = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-white tracking-tight">
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-white tracking-tight">
                         Engineering <span className="text-gradient">Approach</span>
                     </h2>
-                    <p className="text-text-muted text-base max-w-2xl mx-auto">
+                    <p className="text-text-muted text-base max-w-2xl mx-auto opacity-80">
                         Systematic methodology for building production AI systems
                     </p>
                 </motion.div>
@@ -68,21 +68,21 @@ const Approach = () => {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{ delay: index * 0.15 }}
                             className="relative z-10 flex-1 group"
                         >
                             {/* Card Content */}
                             <motion.div
-                                whileHover={{ y: -8 }}
-                                className="glass-panel p-6 lg:p-7 h-full flex flex-col items-center text-center relative border border-white/5 hover:border-primary/20 transition-all duration-300"
+                                whileHover={{ y: -5 }}
+                                className="glass-panel p-6 lg:p-8 h-full flex flex-col items-center text-center relative border border-white/5 hover:border-primary/20 transition-all duration-300 shadow-lg"
                             >
                                 {/* Number Badge */}
-                                <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-black border border-primary/40 flex items-center justify-center z-20 shadow-neon">
+                                <div className="absolute -top-2 -right-2 md:top-6 md:-right-3 w-8 h-8 rounded-full bg-black border-[2px] border-primary/50 flex items-center justify-center z-20 shadow-[0_0_10px_rgba(0,255,255,0.2)]">
                                     <span className="text-primary font-bold text-[10px] tracking-tighter">{step.number}</span>
                                 </div>
 
                                 {/* Icon Container */}
-                                <div className={`w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-2xl mb-6 ${step.color} border border-white/10 group-hover:scale-110 transition-transform duration-500`}>
+                                <div className={`w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-2xl mb-6 ${step.color} border border-white/10 shadow-[inset_0_0_15px_rgba(255,255,255,0.05)] group-hover:scale-110 transition-transform duration-500`}>
                                     <div className="relative">
                                         <div className={`absolute inset-0 blur-lg opacity-30 bg-current`}></div>
                                         {step.icon}
@@ -93,7 +93,7 @@ const Approach = () => {
                                 <h3 className="text-lg lg:text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors leading-tight min-h-[3rem] flex items-center justify-center">
                                     {step.title}
                                 </h3>
-                                <p className="text-text-muted text-xs lg:text-sm leading-relaxed opacity-80">
+                                <p className="text-text-muted text-xs lg:text-sm leading-relaxed opacity-70 group-hover:opacity-100 transition-opacity">
                                     {step.description}
                                 </p>
                             </motion.div>
