@@ -70,7 +70,7 @@ const Hero = () => {
                                     delay: item.delay,
                                     ease: "easeInOut"
                                 }}
-                                className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border border-white/10 shadow-neon group hover:border-primary/50 transition-colors"
+                                className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-white/10 border border-white/10 backdrop-blur-sm shadow-neon group hover:border-primary/50 transition-colors"
                             >
                                 <motion.div
                                     animate={{ rotate: 360 }}
