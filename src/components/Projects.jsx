@@ -68,7 +68,14 @@ const Projects = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass-panel p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500"
+                            whileHover={{
+                                scale: 1.05,
+                                y: -10,
+                                rotateX: 5,
+                                rotateY: 5,
+                                z: 50
+                            }}
+                            className="glass-panel p-8 relative overflow-hidden group hover:border-white/20 transition-all duration-500 shadow-neon hover:shadow-neon-strong"
                         >
                             {/* Decorative Gradient Background */}
                             <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.gradient} opacity-10 rounded-bl-[100px] transition-opacity duration-300 group-hover:opacity-20`} />

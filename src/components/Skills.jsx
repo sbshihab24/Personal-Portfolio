@@ -80,7 +80,14 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2, duration: 0.5 }}
-                            className="glass-panel p-8 hover:border-white/20 transition-all duration-300 group"
+                            whileHover={{
+                                scale: 1.05,
+                                y: -10,
+                                rotateX: 5,
+                                rotateY: -5,
+                                z: 50
+                            }}
+                            className="glass-panel p-8 hover:border-white/20 transition-all duration-300 group shadow-neon hover:shadow-neon-strong"
                         >
                             <div className={`flex items-center gap-4 mb-8 ${category.color}`}>
                                 <div className="p-4 bg-white/5 rounded-2xl text-3xl group-hover:scale-110 transition-transform duration-300 shadow-neon">

@@ -53,7 +53,14 @@ const Experience = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="glass-panel p-8 hover:border-primary/30 transition-all duration-300 group"
+                            whileHover={{
+                                scale: 1.05,
+                                y: -10,
+                                rotateX: 5,
+                                rotateY: -5,
+                                z: 50
+                            }}
+                            className="glass-panel p-8 hover:border-primary/30 transition-all duration-300 group shadow-neon hover:shadow-neon-strong"
                         >
                             <div className="flex justify-between items-start mb-6">
                                 <div>
