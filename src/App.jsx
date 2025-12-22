@@ -5,11 +5,13 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
+import NexusBackground from './components/NexusBackground';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-dark-bg text-text-main font-outfit selection:bg-primary/30 selection:text-white">
+      <div className="min-h-screen bg-transparent text-text-main font-outfit selection:bg-primary/30 selection:text-white">
+        <NexusBackground />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
