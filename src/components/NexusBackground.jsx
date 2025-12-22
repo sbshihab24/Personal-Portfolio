@@ -9,16 +9,16 @@ const NexusBackground = () => {
         let animationFrameId;
 
         let particles = [];
-        const particleCount = 70;
-        const connectionDistance = 160;
-        const mouseRadius = 180;
+        const particleCount = 75; // Slightly more particles for better "nexus" look
+        const connectionDistance = 165;
+        const mouseRadius = 200;
 
-        // Color Palette: Deep Blue, Vibrant Blue, Cyan
+        // Brand Palette: Vibrant Cyan and Purple (Matches tailwind.config.js)
         const colors = [
-            'rgba(0, 255, 255,',   // Cyan
-            'rgba(59, 130, 246,',  // Blue 500
-            'rgba(37, 99, 235,',   // Blue 600
-            'rgba(147, 197, 253,'  // Blue 300
+            'rgba(0, 255, 255,',   // #00FFFF Cyan (Primary)
+            'rgba(153, 51, 255,',  // #9933FF Purple (Secondary)
+            'rgba(0, 255, 255,',   // Cyan (Repeat for higher frequency)
+            'rgba(153, 51, 255,'   // Purple (Repeat)
         ];
 
         let mouse = {
@@ -36,17 +36,17 @@ const NexusBackground = () => {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 3 + 1;
-                this.speedX = (Math.random() - 0.5) * 0.4;
-                this.speedY = (Math.random() - 0.5) * 0.4;
+                this.size = Math.random() * 3.5 + 1.2; // Slightly larger for clarity
+                this.speedX = (Math.random() - 0.5) * 0.45;
+                this.speedY = (Math.random() - 0.5) * 0.45;
 
-                // Randomly assign a shape: 0=Circle, 1=Square, 2=Triangle
+                // Shapes: 0=Circle, 1=Square, 2=Triangle
                 this.shapeType = Math.floor(Math.random() * 3);
 
-                // Random color from palette
+                // Assign a brand color
                 this.colorBase = colors[Math.floor(Math.random() * colors.length)];
-                this.opacity = Math.random() * 0.5 + 0.2;
-                this.pulseSpeed = Math.random() * 0.02;
+                this.opacity = Math.random() * 0.6 + 0.3; // Higher base opacity for clarity
+                this.pulseSpeed = Math.random() * 0.015 + 0.005;
                 this.pulseDir = 1;
             }
 
@@ -54,25 +54,24 @@ const NexusBackground = () => {
                 this.x += this.speedX;
                 this.y += this.speedY;
 
-                // Bounce off edges
                 if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
                 if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
 
-                // Mouse Interaction (Push effect)
+                // Mouse Push Effect
                 if (mouse.x !== null && mouse.y !== null) {
                     let dx = mouse.x - this.x;
                     let dy = mouse.y - this.y;
                     let distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < mouseRadius) {
                         const force = (mouseRadius - distance) / mouseRadius;
-                        this.x -= dx * force * 0.02;
-                        this.y -= dy * force * 0.02;
+                        this.x -= dx * force * 0.03;
+                        this.y -= dy * force * 0.03;
                     }
                 }
 
-                // Opacity Pulse
+                // Clarity-focused Opacity Pulse (never goes too dim)
                 this.opacity += this.pulseSpeed * this.pulseDir;
-                if (this.opacity > 0.7 || this.opacity < 0.2) this.pulseDir *= -1;
+                if (this.opacity > 0.85 || this.opacity < 0.4) this.pulseDir *= -1;
             }
 
             draw() {
@@ -80,24 +79,25 @@ const NexusBackground = () => {
                 ctx.beginPath();
 
                 if (this.shapeType === 0) {
-                    // Circle
                     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 } else if (this.shapeType === 1) {
-                    // Square
                     ctx.rect(this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
                 } else {
-                    // Triangle
-                    ctx.moveTo(this.x, this.y - this.size);
-                    ctx.lineTo(this.x + this.size, this.y + this.size);
-                    ctx.lineTo(this.x - this.size, this.y + this.size);
+                    ctx.moveTo(this.x, this.y - this.size * 1.2);
+                    ctx.lineTo(this.x + this.size * 1.2, this.y + this.size * 1);
+                    ctx.lineTo(this.x - this.size * 1.2, this.y + this.size * 1);
+                    ctx.closePath();
                 }
 
                 ctx.fill();
 
-                // Optional: Add a subtle glow
-                if (this.opacity > 0.5) {
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = 'rgba(0, 255, 255, 0.3)';
+                // Distinct Glow Effect for the "Primary" color
+                if (this.colorBase.includes('0, 255, 255') && this.opacity > 0.6) {
+                    ctx.shadowBlur = 12;
+                    ctx.shadowColor = 'rgba(0, 255, 255, 0.4)';
+                } else if (this.opacity > 0.6) {
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = 'rgba(153, 51, 255, 0.3)';
                 } else {
                     ctx.shadowBlur = 0;
                 }
@@ -112,7 +112,7 @@ const NexusBackground = () => {
         };
 
         const drawConnections = () => {
-            ctx.shadowBlur = 0; // Connections shouldn't glow too much
+            ctx.shadowBlur = 0;
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
@@ -120,9 +120,10 @@ const NexusBackground = () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < connectionDistance) {
-                        const alpha = (1 - distance / connectionDistance) * 0.3;
+                        // Lines are clearer now (mix of cyan and white/alpha)
+                        const alpha = (1 - distance / connectionDistance) * 0.45;
                         ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
-                        ctx.lineWidth = 0.8;
+                        ctx.lineWidth = 1.0; // Slightly thicker lines for clarity
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
@@ -134,16 +135,11 @@ const NexusBackground = () => {
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw particles
             particles.forEach(p => {
                 p.update();
                 p.draw();
             });
-
-            // Draw Nexus Connections
             drawConnections();
-
             animationFrameId = requestAnimationFrame(animate);
         };
 
