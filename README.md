@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio! I am a CSE graduate and Junior AI Developer specialized in building scalable AI solutions, from Computer Vision systems to Autonomous Agents and RAG pipelines.
 
+## Live Link https://shihab247.netlify.app/
+
 ## 🚀 Featured Projects
 
 ### [Agentic AI System](https://github.com/sbshihab24/Agentic--AI)
