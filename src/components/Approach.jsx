@@ -42,7 +42,7 @@ const approachSteps = [
 
 const Approach = () => {
     return (
-        <section id="approach" className="py-18 relative overflow-hidden bg-black/20">
+        <section id="approach" className="py-12 relative overflow-hidden bg-black/20">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

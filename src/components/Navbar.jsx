@@ -20,7 +20,6 @@ const Navbar = () => {
         { name: 'Skills', to: 'skills', type: 'scroll' },
         { name: 'Experience', to: 'experience', type: 'scroll' },
         { name: 'Projects', to: 'projects', type: 'scroll' },
-        { name: 'Approach', to: 'approach', type: 'scroll' },
         { name: 'Blog', to: '/blog', type: 'router' },
         { name: 'Contact Me', to: 'contact', type: 'scroll' },
     ];

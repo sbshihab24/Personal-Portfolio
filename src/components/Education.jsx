@@ -33,7 +33,7 @@ const educationData = [
 
 const Education = () => {
     return (
-        <section className="py-20 relative bg-dark-bg/50">
+        <section className="py-12 relative bg-dark-bg/50">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

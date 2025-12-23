@@ -4,7 +4,7 @@ import { FaRocket, FaLightbulb } from 'react-icons/fa';
 
 const About = () => {
     return (
-        <section id="about" className="py-18 relative overflow-hidden bg-dark-bg/50">
+        <section id="about" className="py-12 relative overflow-hidden bg-dark-bg/50">
             <div className="container mx-auto px-6">
                 <div className="max-w-5xl mx-auto">
                     <motion.div
