@@ -37,7 +37,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="bg-dark-bg/80 border-t border-white/10 py-24 relative overflow-hidden">
+        <section id="contact" className="bg-dark-bg/80 border-t border-white/10 py-18 relative overflow-hidden">
             {/* Background Glows */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />

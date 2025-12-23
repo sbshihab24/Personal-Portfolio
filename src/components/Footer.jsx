@@ -4,9 +4,9 @@ import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, 
 
 const Footer = () => {
     return (
-        <footer className="bg-[#1a1a1a] border-t border-white/5 py-16 relative overflow-hidden">
+        <footer className="bg-[#1a1a1a] border-t border-white/5 py-8 relative overflow-hidden">
             <div className="container mx-auto px-6">
-                <div className="grid md:grid-cols-3 gap-12 items-start mb-12">
+                <div className="grid md:grid-cols-3 gap-12 items-start mb-8">
 
                     {/* Column 1: Brand & Nav */}
                     <div className="space-y-6">
@@ -69,7 +69,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar: Copyright */}
-                <div className="pt-12 border-t border-white/5 text-center">
+                <div className="pt-8 border-t border-white/5 text-center">
                     <p className="text-sm md:text-base font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]">
                         © 2025 Mehedi Hasan Shihab — Built with React, Tailwind & AI creativity.
                     </p>
