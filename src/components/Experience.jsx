@@ -7,7 +7,7 @@ const experiences = [
         role: "Junior AI Developer",
         company: "Join Venture AI",
         link: "https://joinventure.ai/",
-        period: "August 2025 – Present",
+        period: "February 2025 – Present",
         type: "Onsite",
         description: [
             "Developing autonomous AI agents capable of reasoning, planning, and executing multi-step workflows.",
@@ -19,7 +19,7 @@ const experiences = [
         role: "Machine Learning Engineer Intern",
         company: "Bondstein Technologies Ltd.",
         link: "https://bondstein.com/",
-        period: "Feb 2025 – May 2025",
+        period: "December 2024 – January 2025",
         type: "On-Site",
         description: [
             "Optimized OCR models for automated data extraction.",
